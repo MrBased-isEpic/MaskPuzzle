@@ -10,7 +10,7 @@ public class MainMenu : Screen
     {
         playButton.onClick.AddListener(() =>
         {
-            RequestScreen<PuzzleScreen>();
+            RequestScreen<PuzzleList>();
         });
         
         quitButton.onClick.AddListener((() =>

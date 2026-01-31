@@ -29,8 +29,9 @@ public class PieceManager : MonoBehaviour
 
     public Vector2 cellOffset;
     
-    public void Init()
+    public void Init(PuzzleSO puzzleData)
     {
+        puzzle =  puzzleData;
         gridSpritesDictionary = new Dictionary<int, Sprite>();
         for (int i = 0; i < sides.Length; i++)
         {

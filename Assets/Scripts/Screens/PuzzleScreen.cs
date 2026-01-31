@@ -4,6 +4,8 @@ using UnityEngine;
 public class PuzzleScreen : Screen
 {
     [SerializeField] private PieceManager pieceManager;
+    
+    public PuzzleSO currentPuzzle;
 
     // protected override void Initialize()
     // {
@@ -21,6 +23,6 @@ public class PuzzleScreen : Screen
     {
         yield return new WaitUntil(() => !IsInAnimation());
         
-        pieceManager.Init();
+        pieceManager.Init(currentPuzzle);
     }
 }
