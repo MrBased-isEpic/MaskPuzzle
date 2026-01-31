@@ -22,6 +22,7 @@ public class ScreenManager : MonoBehaviour
     }
     public void Initialize()
     {
+        Debug.Log("Initializing Screen Manager");
         if (initialized) return;
 
         screens = new Dictionary<string, Screen>(transform.childCount);

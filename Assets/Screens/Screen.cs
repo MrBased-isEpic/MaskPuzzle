@@ -17,7 +17,7 @@ public class Screen : MonoBehaviour
    
     public void Setup()
     {
-        //DebugLogger.Log($"Setup Screen Called {transform.name}");
+        Debug.Log($"Setup Screen Called {transform.name}");
         screenManager = GetComponentInParent<ScreenManager>();
         content = transform.GetChild(0).gameObject;
         animator = GetComponent<Animator>();
@@ -34,16 +34,16 @@ public class Screen : MonoBehaviour
 
     public virtual void Show(bool animate)
     {
-        //DebugLogger.Log($"Screen Check For {initialized} {transform.name}");
+        Debug.Log($"Screen Check For {initialized} {transform.name}");
         if (!initialized)
         {
             Initialize();
-            //DebugLogger.Log($"Init Screen {transform.name}");
+            Debug.Log($"Init Screen {transform.name}");
         }
 
         if (content.activeSelf)
         {
-            //DebugLogger.Log($"Content is Active {content.activeSelf} {transform.name}");
+            Debug.Log($"Content is Active {content.activeSelf} {transform.name}");
             return;
         }
         
@@ -51,7 +51,7 @@ public class Screen : MonoBehaviour
 
         if (animator.enabled && animate)
         {
-            //DebugLogger.Log($"Animator is  {animator.enabled} and Called Entry {transform.name}");
+            Debug.Log($"Animator is  {animator.enabled} and Called Entry {transform.name}");
             //animator.ResetTrigger("Entry");
             animator.SetTrigger("Entry");
         }
@@ -74,6 +74,7 @@ public class Screen : MonoBehaviour
 
     protected virtual void Initialize()
     {
+        initialized = true;
         //DebugLogger.Log($"BAse Screen init Called  {transform.name}");
     }
 
@@ -87,7 +88,7 @@ public class Screen : MonoBehaviour
 
     #endregion
 
-
+    #region INTERNAL
     private IEnumerator WaitForHideAnimationAndTurnOff()
     {
         Debug.Log($"Waiting For Hide Animation complete {transform.name}");
@@ -106,4 +107,5 @@ public class Screen : MonoBehaviour
         //DebugLogger.Log($"ISinAnimation {!(clipInfo.normalizedTime > 1)} {transform.name}");
         return !(clipInfo.normalizedTime > 1);
     }
+    #endregion
 }
