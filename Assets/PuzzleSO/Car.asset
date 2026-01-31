@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Car
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleSO
   Name: Car
-  fullSprite: {fileID: -1881251482, guid: 3ed02b1c7abc5ff40ae79d020b74beca, type: 3}
+  fullSprite: {fileID: -302650095, guid: 3ed02b1c7abc5ff40ae79d020b74beca, type: 3}
   pieces:
   - {fileID: -6965004849703244724, guid: 3ed02b1c7abc5ff40ae79d020b74beca, type: 3}
   - {fileID: 307370416, guid: 3ed02b1c7abc5ff40ae79d020b74beca, type: 3}
@@ -29,12 +29,3 @@ MonoBehaviour:
   - {fileID: -1977514122, guid: 3ed02b1c7abc5ff40ae79d020b74beca, type: 3}
   - {fileID: 2147319050, guid: 3ed02b1c7abc5ff40ae79d020b74beca, type: 3}
   - {fileID: 838918553, guid: 3ed02b1c7abc5ff40ae79d020b74beca, type: 3}
-  - {fileID: 166437430, guid: 3ed02b1c7abc5ff40ae79d020b74beca, type: 3}
-  - {fileID: 851140894, guid: 3ed02b1c7abc5ff40ae79d020b74beca, type: 3}
-  - {fileID: -910470317, guid: 3ed02b1c7abc5ff40ae79d020b74beca, type: 3}
-  - {fileID: 1940581268, guid: 3ed02b1c7abc5ff40ae79d020b74beca, type: 3}
-  - {fileID: -1834463436, guid: 3ed02b1c7abc5ff40ae79d020b74beca, type: 3}
-  - {fileID: 1179734740, guid: 3ed02b1c7abc5ff40ae79d020b74beca, type: 3}
-  - {fileID: -787818604, guid: 3ed02b1c7abc5ff40ae79d020b74beca, type: 3}
-  - {fileID: 1882399631, guid: 3ed02b1c7abc5ff40ae79d020b74beca, type: 3}
-  - {fileID: 850658406, guid: 3ed02b1c7abc5ff40ae79d020b74beca, type: 3}
