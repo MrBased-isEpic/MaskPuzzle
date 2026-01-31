@@ -76,12 +76,12 @@ public class PieceManager : MonoBehaviour
             int widthAdd = 0;
             rect.anchoredPosition = pieceData[i].position + offset;
 
-            Debug.Log($"Id {i}, Sides {sides}");
+            //Debug.Log($"Id {i}, Sides {sides}");
             
             
             if (sides - 1000 < 0)
             {
-                Debug.Log($"Up is free");
+                //Debug.Log($"Up is free");
                 heightAdd += 3;
             }
             else
@@ -89,7 +89,7 @@ public class PieceManager : MonoBehaviour
 
             if (sides - 100 < 0)
             {
-                Debug.Log($"Down is free");
+                //Debug.Log($"Down is free");
                 heightAdd += 3;
                 rect.anchoredPosition -= new Vector2(0, 3);
             }
@@ -98,7 +98,7 @@ public class PieceManager : MonoBehaviour
 
             if (sides - 10 < 0)
             {
-                Debug.Log($"Left is free");
+                //Debug.Log($"Left is free");
                 widthAdd += 3;
                 rect.anchoredPosition -= new Vector2(3, 0);
             }
@@ -107,7 +107,7 @@ public class PieceManager : MonoBehaviour
             
             if (sides - 1 < 0)
             {
-                Debug.Log($"Right is free");
+                //Debug.Log($"Right is free");
                 widthAdd += 3;
             }
             else
