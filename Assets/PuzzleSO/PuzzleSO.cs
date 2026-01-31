@@ -10,15 +10,24 @@ public class PuzzleSO : ScriptableObject
     public Sprite fullSprite;
     public Sprite[] pieces;
     
-    public List<Vector2> GetPositions()
+    public List<PieceData> GetPieceData()
     {
-        List<Vector2> positions = new List<Vector2>();
+        List<PieceData> pieceDatas = new List<PieceData>();
 
         foreach (Sprite sprite in pieces)
         {
-            positions.Add(sprite.rect.position);
+            PieceData pieceData = new PieceData();
+            pieceData.position = sprite.rect.position;
+            pieceData.sprite = sprite;
+            pieceDatas.Add(pieceData);
         }
         
-        return positions;
+        return pieceDatas;
     }
+}
+
+public struct PieceData
+{
+    public Vector2 position;
+    public Sprite sprite;
 }
