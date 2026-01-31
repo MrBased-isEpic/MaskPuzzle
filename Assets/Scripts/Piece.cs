@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -6,47 +8,29 @@ using UnityEngine.UI;
 public class Piece : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHandler
 {
     public int id;
-    
-    public int upId
-    {
-        get; private set;
-    }
-    public int downId
-    {
-        get; private set;
-    }
-    public int leftId
-    {
-        get; private set;
-    }
-    public int rightId
-    {
-        get; private set;
-    }
+
+    public bool isParented = false;
+
+    public PieceManager pieceManager;
 
     [SerializeField] public RectTransform rTransform;
     [SerializeField] private Image image;
     [SerializeField] private Image shadow;
+    
+    private int attachedId = -1;
+    
+    public bool isComplete
+    {
+        get
+        {
+            return attachedId != -1 && attachedId == id;
+        }
+    }
 
-    // public bool isComplete
-    // {
-    //     get
-    //     {
-    //         
-    //     }
-    // }
-
-
-    private Vector2 dragOffset;
-    public void SetIds(List<PieceData> pieces, int index)
+    public int Init(List<PieceData> pieces, int index)
     {
         id = index;
         SetSprite(pieces[index].sprite);
-        
-        upId = -1;
-        downId = -1;
-        leftId = -1;
-        rightId = -1;
         
         //Debug.Log($"Searching ids for {index}");
         //Debug.Log($"Position is {pieces[index].position}");
@@ -70,30 +54,33 @@ public class Piece : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHandle
             pieces[index].position.y);
         
         //Debug.Log($"rightPos is {rightPos}");
-        
-        
-        for (int i = index; i > 0; i--)
-        {
-            if (leftId == -1 && pieces[i].position == leftPos)
-                leftId = i;
-            
-            if (upId == -1 && pieces[i].position == upPos)
-                upId = i;
+        int sides = 0;
 
-            if (upId != -1 && leftId != -1) break;
+        if (index > 0 && pieces[index - 1].position.y == pieces[index].position.y) sides += 10;
+        if (index < pieces.Count-1 && pieces[index + 1].position.y == pieces[index].position.y) sides += 1;
+        
+        for (int i = index - 1; i >= 0; i--)
+        {
+            if (pieces[i].position == upPos)
+            {
+                sides += 1000;
+                break;
+            }
         }
         
-        for (int i = index; i < pieces.Count; i++)
+        for (int i = index + 1; i < pieces.Count; i++)
         {
-            if (rightId == -1 && pieces[i].position == rightPos)
-                rightId = i;
-            
-            if (downId == -1 && pieces[i].position == downPos)
-                downId = i;
-            
-            if (rightId != -1 && downId != -1) break;
+            if (pieces[i].position == downPos)
+            {
+                sides += 100;
+                break;
+            }
         }
+
+        //Debug.Log($"Sides : {sides}");
+        return sides;
     }
+
 
     public void SetSprite(Sprite sprite)
     {
@@ -105,18 +92,32 @@ public class Piece : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHandle
         image.GetComponent<RectTransform>().sizeDelta = rTransform.sizeDelta;
     }
 
+    private Vector2 dragOffset;
+    
     public void OnDrag(PointerEventData eventData)
     {
         rTransform.anchoredPosition = eventData.position - dragOffset;
     }
-
+    
     public void OnDrop(PointerEventData eventData)
     {
-        //throw new System.NotImplementedException();
+        if (isParented) return;
+        
+        int cell = pieceManager.GetAttachablePosition(eventData.position, rTransform.anchoredPosition);
+        if (cell == -1) return;
+        
+        attachedId = cell;
+        pieceManager.AttachPieceToCell(this, cell);
     }
-
+    
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (attachedId != -1)
+        {
+            pieceManager.DetachPieceFromCell(attachedId);
+            attachedId = -1;
+        }
+
         dragOffset = eventData.position - rTransform.anchoredPosition;
     }
 }
