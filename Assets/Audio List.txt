@@ -2,4 +2,6 @@ Main menu bgm
 gameplay bgm
 Pick up
 Put down + Slot fix
+Success jingle
+Fail music
 Timer tick
