@@ -93,7 +93,11 @@ public class PieceManager : MonoBehaviour
             positions[i] = (pieceData[i].position + worldOffset - cellOffset);
             piecesAttached[i] = -1;
 
-            piece.rTransform.anchoredPosition = positions[i];
+            piece.rTransform.anchoredPosition = new Vector2(
+                Random.Range(halfWidth, UnityEngine.Screen.width - halfWidth),
+                Random.Range(halfHeight, UnityEngine.Screen.height - halfHeight)
+            );
+            
             int sides = piece.Init(pieceData, i);
             
             RectTransform rect = Instantiate(gridPrefab, gridParent).GetComponent<RectTransform>();
