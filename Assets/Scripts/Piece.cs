@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -131,6 +132,8 @@ public class Piece : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHandle
         }
 
         dragOffset = eventData.position - rTransform.anchoredPosition;
+        
+        AudioManager.Instance.PlaySfx(pieceManager.pickUpSFX);
 
         if(scaleCouroutine != null)
             StopCoroutine(scaleCouroutine);

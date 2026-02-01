@@ -5,6 +5,8 @@ public class MainMenu : Screen
 {
     [SerializeField] private Button playButton;
     [SerializeField] private Button quitButton;
+    
+    [SerializeField] private AudioClip mainMenuBGM;
 
     protected override void Initialize()
     {
@@ -16,5 +18,11 @@ public class MainMenu : Screen
         }));
         
         base.Initialize();
+    }
+
+    public override void Show()
+    {
+        base.Show();
+        AudioManager.Instance.PlayMusic(mainMenuBGM, .8f);
     }
 }

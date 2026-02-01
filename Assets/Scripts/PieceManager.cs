@@ -22,6 +22,10 @@ public class PieceManager : MonoBehaviour
     [SerializeField] private float lockOnDistance;
     private Dictionary<int, Sprite> gridSpritesDictionary;
 
+    [Space]
+    public AudioClip pickUpSFX;
+    public AudioClip putDownSFX;
+
     private Vector2[] positions;
     private int[] piecesAttached;
 
@@ -225,10 +229,18 @@ public class PieceManager : MonoBehaviour
     {
         piecesAttached[cell] = piece.id;
         pieceMoveRoutine = StartCoroutine(
-            Animations.MoveRectTransformAnchored(piece.rTransform, positions[cell], .1f, Eases.EaseInCubic));
+            AttachRoutine(piece, cell));
         
         if(IsComplete())
             (ScreenManager.Instance.GetScreen<PuzzleScreen>() as PuzzleScreen).OnPuzzleSolved();
+    }
+
+    private IEnumerator AttachRoutine(Piece piece, int cell)
+    {
+        yield return StartCoroutine(
+            Animations.MoveRectTransformAnchored(piece.rTransform, positions[cell], .1f, Eases.EaseInCubic));
+        
+        AudioManager.Instance.PlaySfx(putDownSFX);
     }
 
     public void DetachPieceFromCell(int cell)

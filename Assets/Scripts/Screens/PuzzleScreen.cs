@@ -5,6 +5,8 @@ public class PuzzleScreen : Screen
 {
     [SerializeField] private PieceManager pieceManager;
     [SerializeField] private Timer timer;
+    [SerializeField] private AudioClip playBGM;
+    
     
     public PuzzleSO currentPuzzle;
 
@@ -20,6 +22,7 @@ public class PuzzleScreen : Screen
         base.Show();
 
         StartCoroutine(StartAfterAnimation());
+        AudioManager.Instance.StopMusic();
     }
 
     public override void Hide()
@@ -82,6 +85,8 @@ public class PuzzleScreen : Screen
     private IEnumerator Intro2()
     {
         Vector2[] startPositions = pieceManager.GetRandomPositions();
+        
+        AudioManager.Instance.PlayMusic(playBGM, .2f);
         
         yield return StartCoroutine(
             Animations.ScaleTransform(pieceManager.transform, Vector3.one, .6f, Eases.EaseInCubic));
