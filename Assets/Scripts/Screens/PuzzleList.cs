@@ -4,10 +4,10 @@ using UnityEngine.UI;
 
 public class PuzzleList : Screen
 {
-
-    [SerializeField] private Transform gridLayout;
+    
     [SerializeField] private List<PuzzleSO> puzzleList;
     [SerializeField] private GameObject listButtonPrefab;
+    [SerializeField] private Transform gridLayout;
 
     protected override void Initialize()
     {
@@ -15,10 +15,11 @@ public class PuzzleList : Screen
         {
             Button listButton = Instantiate(listButtonPrefab, gridLayout).GetComponent<Button>();
             
+            listButton.GetComponent<Image>().sprite = puzzleList[index].fullSprite;
+            
             int i = index;
             listButton.onClick.AddListener(() =>
             {
-                Debug.Log(i);
                 (screenManager.GetScreen<PuzzleScreen>() as PuzzleScreen).currentPuzzle = puzzleList[i];
                 GoToScreen<PuzzleScreen>();
             });

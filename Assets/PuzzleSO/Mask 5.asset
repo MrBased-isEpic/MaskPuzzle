@@ -16,3 +16,27 @@ MonoBehaviour:
   fullSprite: {fileID: 1124829846, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
   pieces:
   - {fileID: 12335064, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
+  - {fileID: -1954768501, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
+  - {fileID: 636604807, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
+  - {fileID: -644359519, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
+  - {fileID: -1357712556, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
+  - {fileID: 2951623, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
+  - {fileID: -1355481163, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
+  - {fileID: 1577926441, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
+  - {fileID: 202579543, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
+  - {fileID: 1475044984, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
+  - {fileID: 1390607648, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
+  - {fileID: 1197322010, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
+  - {fileID: -685517613, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
+  - {fileID: 612525420, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
+  - {fileID: 860967740, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
+  - {fileID: 582783178, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
+  - {fileID: 448688663, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
+  - {fileID: -1943306289, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
+  - {fileID: 1642616691, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
+  - {fileID: 1582368839, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
+  - {fileID: -1332198402, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
+  - {fileID: 1606526194, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
+  - {fileID: -803485865, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
+  - {fileID: 2010960507, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}
+  - {fileID: 531081272, guid: 25fe4c840339fd84d889e5cfcc0c46a1, type: 3}

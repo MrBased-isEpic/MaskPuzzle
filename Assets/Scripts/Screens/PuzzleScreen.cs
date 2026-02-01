@@ -12,9 +12,8 @@ public class PuzzleScreen : Screen
 
     protected override void Initialize()
     {
-        base.Initialize();
-
         pieceManager.Init();
+        base.Initialize();
     }
     
     public override void Show()
@@ -71,7 +70,7 @@ public class PuzzleScreen : Screen
     {
         yield return null;
 
-        pieceManager.transform.localScale = Vector3.one * 1.3f;
+        pieceManager.transform.localScale = Vector3.one * 1.2f;
         Vector2[] startPositions = pieceManager.StartPuzzle(currentPuzzle);
         
         timer.StartTimer(StartIntro2, 3);

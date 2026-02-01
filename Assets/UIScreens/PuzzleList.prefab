@@ -58,14 +58,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.69182384, g: 0.69182384, b: 0.69182384, a: 1}
+  m_Color: {r: 0.836478, g: 0.836478, b: 0.836478, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -8065002600911622951, guid: 32cf5e99a82ce114d8b04d29a06578e4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &8547923816253554911
+--- !u!1 &5254040915121411429
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83,23 +83,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7958333254430464228}
-  - component: {fileID: 9101372339166090501}
+  - component: {fileID: 6652425693291712565}
+  - component: {fileID: 7190902550185250139}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &7958333254430464228
+--- !u!224 &6652425693291712565
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8547923816253554911}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_GameObject: {fileID: 5254040915121411429}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -109,15 +109,15 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -200, y: -200}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &9101372339166090501
+--- !u!114 &7190902550185250139
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8547923816253554911}
+  m_GameObject: {fileID: 5254040915121411429}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
@@ -131,10 +131,10 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 300, y: 300}
-  m_Spacing: {x: 10, y: 0}
-  m_Constraint: 0
-  m_ConstraintCount: 2
+  m_CellSize: {x: 350, y: 350}
+  m_Spacing: {x: 100, y: 25}
+  m_Constraint: 1
+  m_ConstraintCount: 3
 --- !u!1001 &1564993102451338820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -240,7 +240,7 @@ PrefabInstance:
       addedObject: {fileID: 4507254069563406881}
     - targetCorrespondingSourceObject: {fileID: 1720018051533078374, guid: 0d46cbf4e29ff2440b1862d9cd9ff48c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7958333254430464228}
+      addedObject: {fileID: 6652425693291712565}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1720018052356416535, guid: 0d46cbf4e29ff2440b1862d9cd9ff48c, type: 3}
       insertIndex: -1
@@ -269,7 +269,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleList
   content: {fileID: 0}
-  gridLayout: {fileID: 7958333254430464228}
   puzzleList:
-  - {fileID: 11400000, guid: 654db55e6ca31904cb25940e69999201, type: 2}
-  listButtonPrefab: {fileID: 2211477399709899896, guid: 875e1277c80bc544c8fa2146e376737a, type: 3}
+  - {fileID: 11400000, guid: 1ff9d6c99143db54683355b16d9483a4, type: 2}
+  - {fileID: 11400000, guid: d6022bb1dfc1244459fb10b3452f4255, type: 2}
+  - {fileID: 11400000, guid: 54ec0396510116a489e887bc59891ff7, type: 2}
+  - {fileID: 11400000, guid: de641413fcbaed94d8859886258a16c9, type: 2}
+  - {fileID: 11400000, guid: ffaad410521487b4eb5ff2c0af46049d, type: 2}
+  - {fileID: 11400000, guid: 05a886396f46a194ab495ddc3596c59c, type: 2}
+  listButtonPrefab: {fileID: 2636487407319846333, guid: 7d19938904eda7741a888a0a535d6dc7, type: 3}
+  gridLayout: {fileID: 6652425693291712565}
