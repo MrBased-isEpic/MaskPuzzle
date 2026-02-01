@@ -15,7 +15,6 @@ MonoBehaviour:
   Name: 
   fullSprite: {fileID: 904293606, guid: cf697843f3b4afb4d91c236803a94323, type: 3}
   pieces:
-  - {fileID: 888206671, guid: cf697843f3b4afb4d91c236803a94323, type: 3}
   - {fileID: 874508524, guid: cf697843f3b4afb4d91c236803a94323, type: 3}
   - {fileID: 1861799425, guid: cf697843f3b4afb4d91c236803a94323, type: 3}
   - {fileID: -169141338, guid: cf697843f3b4afb4d91c236803a94323, type: 3}
