@@ -113,6 +113,8 @@ MonoBehaviour:
   - {fileID: 297408103, guid: c5b61e5addc66184ca0dd9891cad9740, type: 3}
   - {fileID: -1896961580, guid: c5b61e5addc66184ca0dd9891cad9740, type: 3}
   lockOnDistance: 25
+  pickUpSFX: {fileID: 8300000, guid: af2f51e5efa70aa418351c477dd902d3, type: 3}
+  putDownSFX: {fileID: 8300000, guid: e795442b822e3894d8a20e37520330bc, type: 3}
   halfWidth: 0
   halfHeight: 0
   cellOffset: {x: 0, y: 0}
@@ -372,6 +374,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleScreen
   content: {fileID: 0}
   pieceManager: {fileID: 9164022608717578852}
+  timer: {fileID: 687537863923299983}
+  playBGM: {fileID: 8300000, guid: 48cd280c9072f394c9875afc2f07e04c, type: 3}
   currentPuzzle: {fileID: 0}
   currentState: 0
 --- !u!224 &5581726008300779353 stripped

@@ -729,6 +729,7 @@ MonoBehaviour:
   content: {fileID: 0}
   playButton: {fileID: 8087547148539268924}
   quitButton: {fileID: 9139900909526064326}
+  mainMenuBGM: {fileID: 8300000, guid: cd296953ff9e20645acad2725a21a69c, type: 3}
 --- !u!224 &5528691750684814899 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1720018051533078374, guid: 0d46cbf4e29ff2440b1862d9cd9ff48c, type: 3}

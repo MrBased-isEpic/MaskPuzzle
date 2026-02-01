@@ -22,6 +22,10 @@ public class PieceManager : MonoBehaviour
     [SerializeField] private float lockOnDistance;
     private Dictionary<int, Sprite> gridSpritesDictionary;
 
+    [Space]
+    public AudioClip pickUpSFX;
+    public AudioClip putDownSFX;
+
     private Vector2[] positions;
     private int[] piecesAttached;
 
@@ -77,11 +81,6 @@ public class PieceManager : MonoBehaviour
             
             positions[i] = (pieceData[i].position + worldOffset - cellOffset);
             piecesAttached[i] = -1;
-
-            startPositions[i] = new Vector2(
-                Random.Range(halfWidth, UnityEngine.Screen.width - halfWidth),
-                Random.Range(halfHeight, UnityEngine.Screen.height - halfHeight)
-            );
 
             piece.rTransform.anchoredPosition = positions[i];
             
@@ -155,6 +154,21 @@ public class PieceManager : MonoBehaviour
         pieces.Clear();
         
     }
+
+    public Vector2[] GetRandomPositions()
+    {
+        Vector2[] startPositions =new Vector2[pieces.Count];
+
+        for (int i = 0; i < pieces.Count; i++)
+        {
+            startPositions[i] = new Vector2(
+                Random.Range(halfWidth, UnityEngine.Screen.width - halfWidth),
+                Random.Range(halfHeight, UnityEngine.Screen.height - halfHeight)
+            );
+        }
+
+        return startPositions;
+    }
     
     #region Animations
 
@@ -215,10 +229,18 @@ public class PieceManager : MonoBehaviour
     {
         piecesAttached[cell] = piece.id;
         pieceMoveRoutine = StartCoroutine(
-            Animations.MoveRectTransformAnchored(piece.rTransform, positions[cell], .1f, Eases.EaseInCubic));
+            AttachRoutine(piece, cell));
         
         if(IsComplete())
-            Debug.Log($"Puzzle is complete");
+            (ScreenManager.Instance.GetScreen<PuzzleScreen>() as PuzzleScreen).OnPuzzleSolved();
+    }
+
+    private IEnumerator AttachRoutine(Piece piece, int cell)
+    {
+        yield return StartCoroutine(
+            Animations.MoveRectTransformAnchored(piece.rTransform, positions[cell], .1f, Eases.EaseInCubic));
+        
+        AudioManager.Instance.PlaySfx(putDownSFX);
     }
 
     public void DetachPieceFromCell(int cell)
