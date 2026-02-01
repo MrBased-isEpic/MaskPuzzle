@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -15,10 +16,10 @@ public class PieceManager : MonoBehaviour
 
     [SerializeField] private int[] sides;
     [SerializeField] private Sprite[] gridSprites;
+    private CanvasGroup gridAlpha;
     
     [Space]
     [SerializeField] private float lockOnDistance;
-    
     private Dictionary<int, Sprite> gridSpritesDictionary;
 
     private Vector2[] positions;
@@ -28,53 +29,37 @@ public class PieceManager : MonoBehaviour
     public float halfHeight;
 
     public Vector2 cellOffset;
-    
-    #region StateMachine
 
-
-    public State currentState;
-    private void SwitchState(State nextState)
+    public void Init()
     {
-        currentState = nextState;
-
-        switch (currentState)
-        {
-            case State.Intro:
-                
-                
-                break;
-            case State.Puzzle:
-                break;
-            case State.Fail:
-                break;
-            case State.Success:
-                break;
-        }
-    }
-    
-    #endregion
-    
-    
-    public void StartPuzzle(PuzzleSO puzzleData)
-    {
-        puzzle =  puzzleData;
         gridSpritesDictionary = new Dictionary<int, Sprite>();
         for (int i = 0; i < sides.Length; i++)
         {
             gridSpritesDictionary.Add(sides[i], gridSprites[i]);
         }
         
-        SpawnAllPieces();
+        gridAlpha = gridParent.GetComponent<CanvasGroup>();
+    }
+    
+    public Vector2[] StartPuzzle(PuzzleSO puzzleData)
+    {
+        puzzle =  puzzleData;
+        
+        return SpawnAllPieces();
     }
 
-    private void SpawnAllPieces()
+    private Vector2[] SpawnAllPieces()
     {
         List<PieceData> pieceData = puzzle.GetPieceData();
 
         positions = new Vector2[pieceData.Count];
         piecesAttached = new int[pieceData.Count];
+
+        Vector2[] startPositions =new Vector2[pieceData.Count];
         
         pieces = new List<Piece>();
+
+        gridAlpha.alpha = 0;
 
         Vector2 worldOffset = new Vector2((UnityEngine.Screen.width / 2) - (puzzle.fullSprite.rect.width / 2),
             (UnityEngine.Screen.height / 2) - (puzzle.fullSprite.rect.height / 2));
@@ -93,10 +78,12 @@ public class PieceManager : MonoBehaviour
             positions[i] = (pieceData[i].position + worldOffset - cellOffset);
             piecesAttached[i] = -1;
 
-            piece.rTransform.anchoredPosition = new Vector2(
+            startPositions[i] = new Vector2(
                 Random.Range(halfWidth, UnityEngine.Screen.width - halfWidth),
                 Random.Range(halfHeight, UnityEngine.Screen.height - halfHeight)
             );
+
+            piece.rTransform.anchoredPosition = positions[i];
             
             int sides = piece.Init(pieceData, i);
             
@@ -148,8 +135,64 @@ public class PieceManager : MonoBehaviour
             
             pieces.Add(piece);
         }
+        
+        return startPositions;
     }
 
+    public void Cleanup()
+    {
+        foreach (Transform child in gridParent)
+        {
+            Destroy(child.gameObject);
+        }
+
+        foreach (Piece piece in pieces)
+        {
+            Destroy(piece.gameObject);
+        }
+        
+        positions = new Vector2[0];
+        pieces.Clear();
+        
+    }
+    
+    #region Animations
+
+    public IEnumerator AnimatePiecesRoutine(Vector2[] startPositions)
+    {
+        Coroutine[] routine = new Coroutine[startPositions.Length];
+        
+        for (int i = 0; i < startPositions.Length; i++)
+        {
+            routine[i] = StartCoroutine(
+                Animations.MoveRectTransformAnchored(
+                    pieces[i].rTransform, startPositions[i], 1f, Eases.EaseOutCubic)
+                );
+        }
+
+        yield return new WaitForSeconds(1);
+        
+        yield return StartCoroutine(
+            Animations.LerpAlpha(gridAlpha, 1, 1, Eases.None));
+
+        foreach (Coroutine ro in routine)
+        {
+            yield return ro;
+        }
+    }
+
+    public void EnablePieceDragging()
+    {
+        foreach (Piece piece in pieces)
+        {
+            piece.GetComponent<Image>().raycastTarget = true;
+        }
+    }
+    
+    #endregion
+
+    #region PickupDropInterface
+    
     public int GetAttachablePosition(Vector2 mousePosition, Vector2 piecePosition)
     {
         //Debug.Log("Requested GetAttachablePosition");
@@ -182,6 +225,8 @@ public class PieceManager : MonoBehaviour
     {
         piecesAttached[cell] = -1;
     }
+    
+    #endregion
 
     public bool IsComplete()
     {
@@ -191,12 +236,4 @@ public class PieceManager : MonoBehaviour
         }
         return true;
     }
-}
-
-public enum State
-{
-    Intro,
-    Puzzle,
-    Fail,
-    Success
 }

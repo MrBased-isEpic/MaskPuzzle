@@ -7,10 +7,12 @@ public class PuzzleScreen : Screen
     
     public PuzzleSO currentPuzzle;
 
-    // protected override void Initialize()
-    // {
-    //     base.Initialize();
-    // }
+    protected override void Initialize()
+    {
+        base.Initialize();
+
+        pieceManager.Init();
+    }
     
     public override void Show()
     {
@@ -29,6 +31,7 @@ public class PuzzleScreen : Screen
     IEnumerator StartAfterAnimation()
     {
         yield return new WaitUntil(() => !IsAnimationPlaying());
+        SwitchState(State.Intro);
     }
     
     #region StateMachine
@@ -58,9 +61,18 @@ public class PuzzleScreen : Screen
         yield return null;
 
         pieceManager.transform.localScale = Vector3.one * 1.3f;
-        pieceManager.StartPuzzle(currentPuzzle);
+        Vector2[] startPositions = pieceManager.StartPuzzle(currentPuzzle);
         
+        yield return new WaitForSeconds(2);
         
+        yield return StartCoroutine(
+            Animations.ScaleTransform(pieceManager.transform, Vector3.one, .6f, Eases.EaseInCubic));
+        
+        yield return StartCoroutine(pieceManager.AnimatePiecesRoutine(startPositions));
+
+        pieceManager.EnablePieceDragging();
+
+        SwitchState(State.Puzzle);
     }
     
     #endregion
