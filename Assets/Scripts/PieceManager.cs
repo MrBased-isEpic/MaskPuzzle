@@ -76,7 +76,7 @@ public class PieceManager : MonoBehaviour
         
         pieces = new List<Piece>();
 
-        Vector2 offset = new Vector2((UnityEngine.Screen.width / 2) - (puzzle.fullSprite.rect.width / 2),
+        Vector2 worldOffset = new Vector2((UnityEngine.Screen.width / 2) - (puzzle.fullSprite.rect.width / 2),
             (UnityEngine.Screen.height / 2) - (puzzle.fullSprite.rect.height / 2));
         
         halfWidth =  puzzle.pieces[0].rect.width / 2;
@@ -90,10 +90,10 @@ public class PieceManager : MonoBehaviour
 
             piece.pieceManager = this;
             
-            positions[i] = (pieceData[i].position + offset);
+            positions[i] = (pieceData[i].position + worldOffset - cellOffset);
             piecesAttached[i] = -1;
-            
-            piece.rTransform.anchoredPosition = pieceData[i].position + offset;
+
+            piece.rTransform.anchoredPosition = positions[i];
             int sides = piece.Init(pieceData, i);
             
             RectTransform rect = Instantiate(gridPrefab, gridParent).GetComponent<RectTransform>();
@@ -101,7 +101,7 @@ public class PieceManager : MonoBehaviour
 
             int heightAdd = 0;
             int widthAdd = 0;
-            rect.anchoredPosition = pieceData[i].position + offset;
+            rect.anchoredPosition = pieceData[i].position + worldOffset;
 
             //Debug.Log($"Id {i}, Sides {sides}");
             
@@ -113,7 +113,7 @@ public class PieceManager : MonoBehaviour
             }
             else
                 sides -= 1000;
-
+            
             if (sides - 100 < 0)
             {
                 //Debug.Log($"Down is free");
@@ -122,7 +122,7 @@ public class PieceManager : MonoBehaviour
             }
             else
                 sides -= 100;
-
+            
             if (sides - 10 < 0)
             {
                 //Debug.Log($"Left is free");
@@ -154,7 +154,7 @@ public class PieceManager : MonoBehaviour
             if(piecesAttached[i] != -1) continue;
             
             //Debug.Log($"Distance between {i} and {position} is {(positions[i] - position).magnitude}");
-            if ((positions[i] - (mousePosition + cellOffset)).magnitude <= lockOnDistance
+            if ((positions[i] - mousePosition).magnitude <= lockOnDistance
                 || (positions[i] - piecePosition).magnitude <= lockOnDistance)
                 return i;
         }

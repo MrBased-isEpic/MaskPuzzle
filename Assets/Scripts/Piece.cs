@@ -9,8 +9,6 @@ public class Piece : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHandle
 {
     public int id;
 
-    public bool isParented = false;
-
     public PieceManager pieceManager;
 
     [SerializeField] public RectTransform rTransform;
@@ -18,6 +16,8 @@ public class Piece : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHandle
     [SerializeField] private Image shadow;
     
     private int attachedId = -1;
+
+    private Coroutine scaleCouroutine;
     
     public bool isComplete
     {
@@ -101,13 +101,25 @@ public class Piece : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHandle
     
     public void OnDrop(PointerEventData eventData)
     {
-        if (isParented) return;
+        if(scaleCouroutine != null)
+            StopCoroutine(scaleCouroutine);
         
         int cell = pieceManager.GetAttachablePosition(eventData.position, rTransform.anchoredPosition);
-        if (cell == -1) return;
+        if (cell == -1)
+        {
+            scaleCouroutine = StartCoroutine(
+                Animations.ScaleTransform(transform, Vector3.one, .1f, Eases.EaseOutCubic));
+            return;
+        }
         
         attachedId = cell;
         pieceManager.AttachPieceToCell(this, cell);
+        
+        if(scaleCouroutine != null)
+            StopCoroutine(scaleCouroutine);
+        
+        scaleCouroutine = StartCoroutine(
+            Animations.ScaleTransform(transform, Vector3.one, .1f, Eases.EaseInCubic));
     }
     
     public void OnBeginDrag(PointerEventData eventData)
@@ -119,5 +131,11 @@ public class Piece : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHandle
         }
 
         dragOffset = eventData.position - rTransform.anchoredPosition;
+
+        if(scaleCouroutine != null)
+            StopCoroutine(scaleCouroutine);
+        
+        scaleCouroutine = StartCoroutine(
+            Animations.ScaleTransform(transform, Vector3.one * 1.1f, .1f, Eases.EaseInOutCubic));
     }
 }
