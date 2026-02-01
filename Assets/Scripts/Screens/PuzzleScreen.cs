@@ -21,8 +21,8 @@ public class PuzzleScreen : Screen
 
     IEnumerator StartAfterAnimation()
     {
-        yield return new WaitUntil(() => !IsInAnimation());
+        yield return new WaitUntil(() => !IsAnimationPlaying());
         
-        pieceManager.Init(currentPuzzle);
+        pieceManager.StartPuzzle(currentPuzzle);
     }
 }

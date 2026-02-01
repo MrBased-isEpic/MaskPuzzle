@@ -29,7 +29,33 @@ public class PieceManager : MonoBehaviour
 
     public Vector2 cellOffset;
     
-    public void Init(PuzzleSO puzzleData)
+    #region StateMachine
+
+
+    public State currentState;
+    private void SwitchState(State nextState)
+    {
+        currentState = nextState;
+
+        switch (currentState)
+        {
+            case State.Intro:
+                
+                
+                break;
+            case State.Puzzle:
+                break;
+            case State.Fail:
+                break;
+            case State.Success:
+                break;
+        }
+    }
+    
+    #endregion
+    
+    
+    public void StartPuzzle(PuzzleSO puzzleData)
     {
         puzzle =  puzzleData;
         gridSpritesDictionary = new Dictionary<int, Sprite>();
@@ -161,4 +187,12 @@ public class PieceManager : MonoBehaviour
         }
         return true;
     }
+}
+
+public enum State
+{
+    Intro,
+    Puzzle,
+    Fail,
+    Success
 }

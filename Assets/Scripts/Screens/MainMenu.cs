@@ -8,10 +8,7 @@ public class MainMenu : Screen
 
     protected override void Initialize()
     {
-        playButton.onClick.AddListener(() =>
-        {
-            RequestScreen<PuzzleList>();
-        });
+        playButton.onClick.AddListener(GoToScreen<PuzzleList>);
         
         quitButton.onClick.AddListener((() =>
         {

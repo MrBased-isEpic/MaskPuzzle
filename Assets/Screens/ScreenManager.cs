@@ -2,18 +2,21 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class ScreenManager : MonoBehaviour
 {
     public bool selfStart = true;
     public bool showFirstScreen = true;
+    public bool createSingleton = true;
     
-    private Dictionary<string, Screen> screens;
+    private Dictionary<int, Screen> screens;
     private Screen current;
 
     private bool initialized;
 
+    public static ScreenManager Instance;
 
     public void Start()
     {
@@ -22,10 +25,12 @@ public class ScreenManager : MonoBehaviour
     }
     public void Initialize()
     {
-        Debug.Log("Initializing Screen Manager");
         if (initialized) return;
-
-        screens = new Dictionary<string, Screen>(transform.childCount);
+        
+        if(createSingleton && Instance == null && Instance != this)
+            Instance = this;
+        
+        screens = new Dictionary<int, Screen>(transform.childCount);
 
         Screen temp;
         for (int i = 0; i < transform.childCount; i++)
@@ -34,7 +39,7 @@ public class ScreenManager : MonoBehaviour
             temp?.Setup();
 
             //DebugLogger.LogError(temp.GetType().Name);
-            screens.Add(temp.GetType().Name, temp);
+            screens.Add(temp.GetType().Name.GetHashCode(), temp);
         }
 
         if(showFirstScreen)
@@ -43,40 +48,77 @@ public class ScreenManager : MonoBehaviour
         initialized = true;
     }
 
-    public void GoToScreen(Type type, float delay = 0)
+    public void OnDestroy()
     {
-        if (!screens.ContainsKey(type.Name)) return;
+        if(Instance != null)
+            Instance = null;
+    }
+    
+    public void GoToScreen<ScreenType>(float delay = 0)
+    {
+        Screen targetScreen = GetScreen<ScreenType>();
+
+        if (targetScreen.content.activeSelf) return;
         
-        Screen targetScreen = screens[type.Name];
-        //Debug.LogError($"targetScreen exists");
-        if (targetScreen == current && targetScreen.content.activeSelf) return;
-        
-        current?.Hide();
+        List<Screen> closingScreens = new List<Screen>();
+
+        foreach (Screen screen in screens.Values)
+        {
+            if (screen.content.activeSelf)
+            {
+                screen.Hide();
+                closingScreens.Add(screen);
+            }
+        }
         
         StopAllCoroutines();
-        StartCoroutine(WaitForHideAnimationAndShow(current, targetScreen, delay));
+        StartCoroutine(WaitForHideAnimationAndShow(closingScreens, targetScreen, delay));
     }
 
+    public void OpenScreen<ScreenType>(float delay = 0)
+    {
+        Screen targetScreen = GetScreen<ScreenType>();
+
+        if (targetScreen.content.activeSelf) return;
+        
+        targetScreen.Show();
+    }
+    
     public Screen GetScreen<ScreenType>()
     {
-        if (!screens.ContainsKey(typeof(ScreenType).Name))
+        int hash = typeof(ScreenType).Name.GetHashCode();
+        if (!screens.ContainsKey(hash))
+        {
+            Debug.LogError($"Can't find requested screen {typeof(ScreenType).Name}");
             return (screens.ElementAt(0).Value);
-        
-        return screens[typeof(ScreenType).Name];
+        }
+
+        return screens[hash];
     }
     
     #region PRIVATE_METHODS
-
-    private IEnumerator WaitForHideAnimationAndShow(Screen hiding, Screen target, float delay)
+    
+    private IEnumerator WaitForHideAnimationAndShow(List<Screen> hiding, Screen target, float delay)
     {
         yield return new WaitForSeconds(delay);
 
-        if (hiding != null)
+        bool isAnimationFinished = false;
+        if (hiding != null && hiding.Count > 0)
         {
-            while (hiding.IsInAnimation())
+            do
             {
                 yield return null;
-            }
+                isAnimationFinished = true;
+                foreach (Screen h in hiding)
+                {
+                    if (h.IsAnimationPlaying())
+                    {
+                        isAnimationFinished = false;
+                        break;
+                    }
+                }
+            }while (!isAnimationFinished);
+            
         }
 
         ShowScreen(target);
@@ -84,10 +126,7 @@ public class ScreenManager : MonoBehaviour
 
     private void ShowScreen(Screen screen)
     {
-        current = screen;
-
-        if (current != null)
-            current.Show();
+        screen.Show();
     }
 
     #endregion

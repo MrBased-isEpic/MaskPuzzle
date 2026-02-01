@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Screen : MonoBehaviour
 {
@@ -12,15 +13,18 @@ public class Screen : MonoBehaviour
     
     [Tooltip("Leave as Empty, Sets Automatically")]
     public GameObject content;
+    private GameObject fader;
     
     private AnimatorStateInfo clipInfo;
    
     public void Setup()
     {
-        Debug.Log($"Setup Screen Called {transform.name}");
         screenManager = GetComponentInParent<ScreenManager>();
         content = transform.GetChild(0).gameObject;
+        fader = transform.GetChild(1).gameObject;
+        fader.gameObject.SetActive(false);
         animator = GetComponent<Animator>();
+        animator.SetTrigger("Stop");
         content.SetActive(false);
         initialized = false;
     }
@@ -29,30 +33,24 @@ public class Screen : MonoBehaviour
 
     public virtual void Show()
     {
-        Show(true);
-    }
-
-    public virtual void Show(bool animate)
-    {
-        Debug.Log($"Screen Check For {initialized} {transform.name}");
+        //Debug.Log($"Screen Check For {initialized} {transform.name}");
         if (!initialized)
         {
             Initialize();
-            Debug.Log($"Init Screen {transform.name}");
+            //Debug.Log($"Init Screen {transform.name}");
         }
 
         if (content.activeSelf)
         {
-            Debug.Log($"Content is Active {content.activeSelf} {transform.name}");
+            //Debug.Log($"Content is Active {content.activeSelf} {transform.name}");
             return;
         }
         
         content.SetActive(true);
 
-        if (animator.enabled && animate)
+        if (animator.enabled)
         {
-            Debug.Log($"Animator is  {animator.enabled} and Called Entry {transform.name}");
-            //animator.ResetTrigger("Entry");
+            //Debug.Log($"Animator is  {animator.enabled} and Called Entry {transform.name}");
             animator.SetTrigger("Entry");
         }
     }
@@ -61,8 +59,6 @@ public class Screen : MonoBehaviour
     {
         if (animator.enabled)
         {
-            //DebugLogger.Log($"Animator is  {animator.enabled} and Called Exit {transform.name}");
-            //animator.ResetTrigger("Exit");
             animator.SetTrigger("Exit");
         }
         StartCoroutine(WaitForHideAnimationAndTurnOff());
@@ -75,37 +71,48 @@ public class Screen : MonoBehaviour
     protected virtual void Initialize()
     {
         initialized = true;
-        //DebugLogger.Log($"BAse Screen init Called  {transform.name}");
+        //Debug.Log($"BAse Screen init Called  {transform.name}");
     }
 
-    protected void RequestScreen<Screen>()
+    protected void GoToScreen<Screen>()
     {
         if(screenManager != null)
-            screenManager.GoToScreen(typeof(Screen));
+            screenManager.GoToScreen<Screen>();
+        else
+            Debug.LogError("No manager controls this screen");
+    }
+
+    protected void OpenScreen<Screen>()
+    {
+        if(screenManager != null)
+            screenManager.OpenScreen<Screen>();
         else
             Debug.LogError("No manager controls this screen");
     }
 
     #endregion
 
-    #region INTERNAL
+
     private IEnumerator WaitForHideAnimationAndTurnOff()
     {
-        Debug.Log($"Waiting For Hide Animation complete {transform.name}");
         yield return null;
-        while (IsInAnimation())
+        while (IsAnimationPlaying())
         {
             yield return null;
         }
-        Debug.Log($"Turn off Content {transform.name}");
+        
+        animator.SetTrigger("Stop");
+            
         content.SetActive(false);
+        
+        fader.SetActive(false);
+        fader.GetComponent<Image>().color = Color.clear;
     }
 
-    public bool IsInAnimation()
+    public bool IsAnimationPlaying()
     {
         clipInfo = animator.GetCurrentAnimatorStateInfo(0);
-        //DebugLogger.Log($"ISinAnimation {!(clipInfo.normalizedTime > 1)} {transform.name}");
-        return !(clipInfo.normalizedTime > 1);
+        //Debug.Log($"ISinAnimation {!(clipInfo.normalizedTime > 1)} {transform.name}");
+        return !(clipInfo.normalizedTime >= 1);
     }
-    #endregion
 }

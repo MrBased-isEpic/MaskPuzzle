@@ -20,7 +20,7 @@ public class PuzzleList : Screen
             {
                 Debug.Log(i);
                 (screenManager.GetScreen<PuzzleScreen>() as PuzzleScreen).currentPuzzle = puzzleList[i];
-                RequestScreen<PuzzleScreen>();
+                GoToScreen<PuzzleScreen>();
             });
         }
 
