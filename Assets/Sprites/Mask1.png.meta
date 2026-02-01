@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -100,35 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mask1_0
-      rect:
-        serializedVersion: 2
-        x: 204
-        y: 820
-        width: 204
-        height: 204
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f7a510f20e5c2554c8a08cb99e9999db
-      internalID: -2030660906
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Mask1_1
       rect:
         serializedVersion: 2
-        x: 408
-        y: 820
-        width: 204
-        height: 204
+        x: 180
+        y: 540
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +125,10 @@ TextureImporter:
       name: Mask1_2
       rect:
         serializedVersion: 2
-        x: 612
-        y: 820
-        width: 204
-        height: 204
+        x: 360
+        y: 540
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,35 +144,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mask1_3
-      rect:
-        serializedVersion: 2
-        x: 816
-        y: 820
-        width: 204
-        height: 204
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e15f820840aabd34a9766e09e7dbb6fd
-      internalID: -649771906
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Mask1_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 616
-        width: 204
-        height: 204
+        y: 360
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,10 +169,10 @@ TextureImporter:
       name: Mask1_5
       rect:
         serializedVersion: 2
-        x: 204
-        y: 616
-        width: 204
-        height: 204
+        x: 180
+        y: 360
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,10 +191,10 @@ TextureImporter:
       name: Mask1_6
       rect:
         serializedVersion: 2
-        x: 408
-        y: 616
-        width: 204
-        height: 204
+        x: 360
+        y: 360
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,10 +213,10 @@ TextureImporter:
       name: Mask1_7
       rect:
         serializedVersion: 2
-        x: 612
-        y: 616
-        width: 204
-        height: 204
+        x: 540
+        y: 360
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,10 +235,10 @@ TextureImporter:
       name: Mask1_8
       rect:
         serializedVersion: 2
-        x: 816
-        y: 616
-        width: 204
-        height: 204
+        x: 0
+        y: 180
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,10 +257,10 @@ TextureImporter:
       name: Mask1_9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 412
-        width: 204
-        height: 204
+        x: 180
+        y: 180
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,10 +279,10 @@ TextureImporter:
       name: Mask1_10
       rect:
         serializedVersion: 2
-        x: 204
-        y: 412
-        width: 204
-        height: 204
+        x: 360
+        y: 180
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -345,10 +301,10 @@ TextureImporter:
       name: Mask1_11
       rect:
         serializedVersion: 2
-        x: 408
-        y: 412
-        width: 204
-        height: 204
+        x: 540
+        y: 180
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -367,10 +323,10 @@ TextureImporter:
       name: Mask1_12
       rect:
         serializedVersion: 2
-        x: 612
-        y: 412
-        width: 204
-        height: 204
+        x: 180
+        y: 0
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,10 +345,10 @@ TextureImporter:
       name: Mask1_13
       rect:
         serializedVersion: 2
-        x: 816
-        y: 412
-        width: 204
-        height: 204
+        x: 360
+        y: 0
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -408,13 +364,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mask1_14
+      name: Mask1_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 208
-        width: 204
-        height: 204
+        x: 540
+        y: 540
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -423,174 +379,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90bacc66ed9041643a81a70a0edd66dc
-      internalID: -1175331716
+      spriteID: a579267e261322e488991df13d78c127
+      internalID: -1851786101
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mask1_15
+      name: Mask1_full
       rect:
         serializedVersion: 2
-        x: 204
-        y: 208
-        width: 204
-        height: 204
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e2c222abdf2ec334a9b886fd40296158
-      internalID: -2141658187
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mask1_16
-      rect:
-        serializedVersion: 2
-        x: 408
-        y: 208
-        width: 204
-        height: 204
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38b974fd2ae116f41a34d65d2e2a8126
-      internalID: 1384184450
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mask1_17
-      rect:
-        serializedVersion: 2
-        x: 612
-        y: 208
-        width: 204
-        height: 204
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2601d013bdcd1a4ebcd251f47770f7b
-      internalID: 680221544
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mask1_18
-      rect:
-        serializedVersion: 2
-        x: 816
-        y: 208
-        width: 204
-        height: 204
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d6a81e7800881bf4ca1dc9bf91a9790f
-      internalID: -47361764
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mask1_19
-      rect:
-        serializedVersion: 2
-        x: 204
-        y: 4
-        width: 204
-        height: 204
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6b0b9913e07414d43982c43cab65c2dc
-      internalID: -983897667
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mask1_20
-      rect:
-        serializedVersion: 2
-        x: 408
-        y: 4
-        width: 204
-        height: 204
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 04842ee5f2a99584c9882a54c4d6b755
-      internalID: -395323265
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mask1_21
-      rect:
-        serializedVersion: 2
-        x: 612
-        y: 4
-        width: 204
-        height: 204
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36367e980ef0c7c4eabf8d73f64daed5
-      internalID: 1130566142
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mask1_Full
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 1024
-        height: 1024
+        width: 718
+        height: 720
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -599,30 +401,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ae9b9d7b87baf44dafb7bfdf8ea7cea
-      internalID: 779836082
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mask1_22
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1007
-        width: 29
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4eb51bb916992604088df83fb70d2683
-      internalID: -1126910138
+      spriteID: e8814ce81ac7f7e4caf5786759976b10
+      internalID: 1714136014
       vertices: []
       indices: 
       edges: []
@@ -641,7 +421,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":5.0},"gridSpriteSize":{"x":204.0,"y":204.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":4.0},"gridSpriteSize":{"x":180.0,"y":180.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Mask1_0: -2030660906
       Mask1_1: -1093622330
@@ -650,23 +430,15 @@ TextureImporter:
       Mask1_12: -1303485838
       Mask1_13: 826109806
       Mask1_14: -1175331716
-      Mask1_15: -2141658187
-      Mask1_16: 1384184450
-      Mask1_17: 680221544
-      Mask1_18: -47361764
-      Mask1_19: -983897667
       Mask1_2: 855520590
-      Mask1_20: -395323265
-      Mask1_21: 1130566142
-      Mask1_22: -1126910138
-      Mask1_3: -649771906
+      Mask1_3: -1851786101
       Mask1_4: 1704337646
       Mask1_5: -1180430745
       Mask1_6: -1003461331
       Mask1_7: 1208434503
       Mask1_8: 1929538581
       Mask1_9: -1233078266
-      Mask1_Full: 779836082
+      Mask1_full: 1714136014
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mask 2
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleSO
   Name: 
-  fullSprite: {fileID: -631620975, guid: 2e604f6ad342f1040b9a4f33fd61fcc6, type: 3}
+  fullSprite: {fileID: 1984204731, guid: 2e604f6ad342f1040b9a4f33fd61fcc6, type: 3}
   pieces:
   - {fileID: -134949078, guid: 2e604f6ad342f1040b9a4f33fd61fcc6, type: 3}
   - {fileID: -1048276008, guid: 2e604f6ad342f1040b9a4f33fd61fcc6, type: 3}
@@ -24,15 +24,3 @@ MonoBehaviour:
   - {fileID: 1398647845, guid: 2e604f6ad342f1040b9a4f33fd61fcc6, type: 3}
   - {fileID: 1219038751, guid: 2e604f6ad342f1040b9a4f33fd61fcc6, type: 3}
   - {fileID: -1680723961, guid: 2e604f6ad342f1040b9a4f33fd61fcc6, type: 3}
-  - {fileID: -1347215502, guid: 2e604f6ad342f1040b9a4f33fd61fcc6, type: 3}
-  - {fileID: 1698386920, guid: 2e604f6ad342f1040b9a4f33fd61fcc6, type: 3}
-  - {fileID: 998677216, guid: 2e604f6ad342f1040b9a4f33fd61fcc6, type: 3}
-  - {fileID: -1693730872, guid: 2e604f6ad342f1040b9a4f33fd61fcc6, type: 3}
-  - {fileID: 1872280090, guid: 2e604f6ad342f1040b9a4f33fd61fcc6, type: 3}
-  - {fileID: 358115921, guid: 2e604f6ad342f1040b9a4f33fd61fcc6, type: 3}
-  - {fileID: -228672541, guid: 2e604f6ad342f1040b9a4f33fd61fcc6, type: 3}
-  - {fileID: 419135660, guid: 2e604f6ad342f1040b9a4f33fd61fcc6, type: 3}
-  - {fileID: 1032451280, guid: 2e604f6ad342f1040b9a4f33fd61fcc6, type: 3}
-  - {fileID: -727530359, guid: 2e604f6ad342f1040b9a4f33fd61fcc6, type: 3}
-  - {fileID: 7956868, guid: 2e604f6ad342f1040b9a4f33fd61fcc6, type: 3}
-  - {fileID: -471076831, guid: 2e604f6ad342f1040b9a4f33fd61fcc6, type: 3}

@@ -25,6 +25,8 @@ public class Timer : MonoBehaviour
         {
             yield return null;
             timer -= Time.deltaTime;
+            
+            timerText.text = Mathf.RoundToInt(timer).ToString();
         }
 
         timerCoroutine = null;

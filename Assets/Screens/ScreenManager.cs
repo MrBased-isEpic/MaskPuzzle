@@ -18,8 +18,10 @@ public class ScreenManager : MonoBehaviour
 
     public static ScreenManager Instance;
 
-    public void Start()
+    public IEnumerator Start()
     {
+        yield return new WaitForSeconds(1);
+        
         if (selfStart)
             Initialize();
     }
