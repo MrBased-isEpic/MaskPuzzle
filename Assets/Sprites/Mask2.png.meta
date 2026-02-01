@@ -1,10 +1,28 @@
 fileFormatVersion: 2
-guid: 3ed02b1c7abc5ff40ae79d020b74beca
+guid: 2e604f6ad342f1040b9a4f33fd61fcc6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6965004849703244724
-    second: CarBody_0
+      213: 8938598779873148172
+    second: EL_0
+  - first:
+      213: -7679747600734800360
+    second: EL_1
+  - first:
+      213: 1847627938133761769
+    second: EL_2
+  - first:
+      213: 7293001058223507483
+    second: EL_3
+  - first:
+      213: 4184675105466518680
+    second: EL_4
+  - first:
+      213: 5579350696189283341
+    second: EL_5
+  - first:
+      213: 4538585916893124268
+    second: EL_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +90,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -100,101 +118,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CarBody_0
-      rect:
-        serializedVersion: 2
-        x: 875
-        y: 736
-        width: 875
-        height: 368
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c4ca09acdf4575f90800000000000000
-      internalID: -6965004849703244724
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CarBody_1
-      rect:
-        serializedVersion: 2
-        x: 1750
-        y: 736
-        width: 875
-        height: 368
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6b0005c74bf7864409c5afc6ad889c35
-      internalID: 307370416
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CarBody_2
-      rect:
-        serializedVersion: 2
-        x: 2625
-        y: 736
-        width: 875
-        height: 368
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 876da39545a91ac43bb8ab193d052b14
-      internalID: 1257287920
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CarBody_3
-      rect:
-        serializedVersion: 2
-        x: 3500
-        y: 736
-        width: 875
-        height: 368
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d4d20d87d81354244aba03fc0e33eb95
-      internalID: 2026064016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CarBody_4
+      name: Mask2_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 368
-        width: 875
-        height: 368
+        y: 820
+        width: 204
+        height: 204
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +133,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8481ee06208eff04eac5d9a2f577793d
-      internalID: -1610446909
+      spriteID: ecc3c31924326bf4a8e54504c728c8b4
+      internalID: -134949078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CarBody_5
+      name: Mask2_1
       rect:
         serializedVersion: 2
-        x: 875
-        y: 368
-        width: 875
-        height: 368
+        x: 204
+        y: 820
+        width: 204
+        height: 204
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,20 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a563f00e85a738d44ad638566f8401f5
-      internalID: 1859827032
+      spriteID: 35ad8f96404c3714e944e5d5d2bc2e9a
+      internalID: -1048276008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CarBody_6
+      name: Mask2_2
       rect:
         serializedVersion: 2
-        x: 1750
-        y: 368
-        width: 875
-        height: 368
+        x: 408
+        y: 820
+        width: 204
+        height: 204
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2da8d843728d6a242b8d9d6af86098cc
-      internalID: -458367920
+      spriteID: 080095bbb54376049a197549546ee428
+      internalID: -918746629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CarBody_7
+      name: Mask2_3
       rect:
         serializedVersion: 2
-        x: 2625
-        y: 368
-        width: 875
-        height: 368
+        x: 612
+        y: 820
+        width: 204
+        height: 204
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,20 +199,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cd20ccbe13fb5340938d78c583563e5
-      internalID: -534446922
+      spriteID: a4dfd49a2d6bd2141b3433778d7b3d10
+      internalID: 1720260533
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CarBody_8
+      name: Mask2_4
       rect:
         serializedVersion: 2
-        x: 3500
-        y: 368
-        width: 875
-        height: 368
+        x: 816
+        y: 820
+        width: 204
+        height: 204
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,130 +221,372 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6682064e0b27fba4fbcd0fe7be8013f2
-      internalID: 1406842638
+      spriteID: 7d012337bea78434da73c9490f58fbda
+      internalID: 933561913
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CarBody_9
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 875
-        height: 368
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50a1fe70e4a72854ea37d76e4a90e1c8
-      internalID: 1106943405
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CarBody_10
-      rect:
-        serializedVersion: 2
-        x: 875
-        y: 0
-        width: 875
-        height: 368
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 135fcf0ede0afe44f84cc7cfb5bda049
-      internalID: 1561167880
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CarBody_11
-      rect:
-        serializedVersion: 2
-        x: 1750
-        y: 0
-        width: 875
-        height: 368
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: acea7d54146f84744b6fdb6410777fa5
-      internalID: -1977514122
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CarBody_12
-      rect:
-        serializedVersion: 2
-        x: 2625
-        y: 0
-        width: 875
-        height: 368
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b054b95f15849dc409374dcd458ea133
-      internalID: 2147319050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CarBody_13
-      rect:
-        serializedVersion: 2
-        x: 3500
-        y: 0
-        width: 875
-        height: 368
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0d2fa8fac00fbd4ab27c1a87e08decf
-      internalID: 838918553
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CarBody_full
+      name: Mask2_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 4376
-        height: 1104
+        y: 616
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df4d843d5b706db4e9d22fa62664da88
+      internalID: 1615671960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mask2_6
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 616
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd83738475c45043b7bdd63377b8a52
+      internalID: 1398647845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mask2_7
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 616
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac50d00650d84a4db06d2d8a93bf6e8
+      internalID: 1219038751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mask2_8
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 616
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a654866b45167be48a8e0157915b12a0
+      internalID: -1680723961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mask2_9
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 616
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a86fe35a7aac014abedbb5473ce286b
+      internalID: -1347215502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mask2_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 412
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 796bd57073c6d544aadc6eed6ee03e02
+      internalID: 1698386920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mask2_11
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 412
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bea41176a1d8124695544ae51c048b1
+      internalID: 998677216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mask2_12
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 412
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28ea369419e6254bb5752d783a9c274
+      internalID: -1693730872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mask2_13
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 412
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f98d0f8ed28d37246acb5b62a12c11dd
+      internalID: 1872280090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mask2_14
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 412
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0524b6b41244fcd45994aca191705b8e
+      internalID: 358115921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mask2_15
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 208
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb6c2480b6d94c043bff1d1fb00343e3
+      internalID: -228672541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mask2_16
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 208
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c04220f91d1524396664526f8b18c9
+      internalID: 419135660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mask2_17
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 208
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 768705926af51b045ba4456ec0fe87d8
+      internalID: 1032451280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mask2_18
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 4
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e3d7ba7d862bf4e8dd2c777eda89cf
+      internalID: -727530359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mask2_19
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 4
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6913b0c897e7d1499471591b224c378
+      internalID: 7956868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mask2_20
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 4
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49b3185d326754478e55ad2986f37b4
+      internalID: -471076831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mask2_Full
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5
+        width: 1024
+        height: 1019
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -423,8 +595,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b694b3c827a649442850ab12e2edc0c8
-      internalID: -302650095
+      spriteID: 24bb220c72aec1941a435c689809a642
+      internalID: -631620975
       vertices: []
       indices: 
       edges: []
@@ -433,7 +605,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f254437316564a742bd1d812c96c4f31
+    spriteID: ff5ddfa63312ed548a73b0ee168137f6
     internalID: 0
     vertices: []
     indices: 
@@ -443,23 +615,30 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":3.0},"gridSpriteSize":{"x":875.0,"y":368.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":5.0},"gridSpriteSize":{"x":204.0,"y":204.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      CarBody_0: -6965004849703244724
-      CarBody_1: 307370416
-      CarBody_10: 1561167880
-      CarBody_11: -1977514122
-      CarBody_12: 2147319050
-      CarBody_13: 838918553
-      CarBody_2: 1257287920
-      CarBody_3: 2026064016
-      CarBody_4: -1610446909
-      CarBody_5: 1859827032
-      CarBody_6: -458367920
-      CarBody_7: -534446922
-      CarBody_8: 1406842638
-      CarBody_9: 1106943405
-      CarBody_full: -302650095
+      Mask2_0: -134949078
+      Mask2_1: -1048276008
+      Mask2_10: 1698386920
+      Mask2_11: 998677216
+      Mask2_12: -1693730872
+      Mask2_13: 1872280090
+      Mask2_14: 358115921
+      Mask2_15: -228672541
+      Mask2_16: 419135660
+      Mask2_17: 1032451280
+      Mask2_18: -727530359
+      Mask2_19: 7956868
+      Mask2_2: -918746629
+      Mask2_20: -471076831
+      Mask2_3: 1720260533
+      Mask2_4: 933561913
+      Mask2_5: 1615671960
+      Mask2_6: 1398647845
+      Mask2_7: 1219038751
+      Mask2_8: -1680723961
+      Mask2_9: -1347215502
+      Mask2_Full: -631620975
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

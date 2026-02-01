@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: f2a771b8ac3236f4897443f16db7761a
+guid: 5d163ddb99be41e418dd8050cda6e4fa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6547947160079449787
-    second: Mask 6_0
+      213: -6426455036829796129
+    second: POINT_0
+  - first:
+      213: -4007374794858686503
+    second: POINT_1
+  - first:
+      213: 8372044530403126469
+    second: POINT_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +106,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mask 6_0
+      name: Mask5_Full
       rect:
         serializedVersion: 2
-        x: 79
-        y: 26
-        width: 355
-        height: 449
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bbe3094ef3bfeda50800000000000000
-      internalID: 6547947160079449787
+      spriteID: fd87dbc5135a0d6a0800000000000000
+      internalID: -6426455036829796129
       vertices: []
       indices: 
       edges: []
@@ -125,7 +131,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6185787c884e1164eb418f89b1f7ef28
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +141,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Mask 6_0: 6547947160079449787
+      Mask5_Full: -6426455036829796129
+      POINT_1: -4007374794858686503
+      POINT_2: 8372044530403126469
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

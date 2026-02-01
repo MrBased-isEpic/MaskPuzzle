@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 826e07e1e9a94b841a2ad3a42669f317
+guid: 25fe4c840339fd84d889e5cfcc0c46a1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1387415517554514169
-    second: Mask 4_0
-  - first:
-      213: -7260714573467623315
-    second: Mask 4_1
+      213: 3264204686206746372
+    second: oni1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,45 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mask 4_0
+      name: Mask4_full
       rect:
         serializedVersion: 2
-        x: 27
+        x: 0
         y: 0
-        width: 448
-        height: 500
+        width: 1024
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7076c4800f8eebce0800000000000000
-      internalID: -1387415517554514169
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mask 4_1
-      rect:
-        serializedVersion: 2
-        x: 461
-        y: 16
-        width: 25
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d60e5f87092cc3b90800000000000000
-      internalID: -7260714573467623315
+      spriteID: 40fb48b1ed8cc4d20800000000000000
+      internalID: 3264204686206746372
       vertices: []
       indices: 
       edges: []
@@ -150,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9260070048eb47640baa2d1bdafab592
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Mask 4_0: -1387415517554514169
-      Mask 4_1: -7260714573467623315
+      Mask4_full: 3264204686206746372
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
