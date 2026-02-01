@@ -26,9 +26,8 @@ public class PuzzleScreen : Screen
 
     public override void Hide()
     {
-        pieceManager.Cleanup();
-        
         base.Hide();
+        pieceManager.Cleanup();
     }
 
     IEnumerator StartAfterAnimation()
@@ -54,12 +53,12 @@ public class PuzzleScreen : Screen
                 StartCoroutine(Puzzle());
                 break;
             case State.Fail:
-                Debug.Log("Time over, pack it up");
-                
+                (screenManager.GetScreen<GameOver>() as GameOver).SetWon(false);
+                GoToScreen<GameOver>();
                 break;
             case State.Success:
-                Debug.Log("Yippee");
-                
+                (screenManager.GetScreen<GameOver>() as GameOver).SetWon(true);
+                GoToScreen<GameOver>();
                 break;
         }
     }
@@ -109,6 +108,12 @@ public class PuzzleScreen : Screen
 
     private void OnTimerEnd()
     {
+        StartCoroutine(TimerEndRoutine());
+    }
+
+    private IEnumerator TimerEndRoutine()
+    {
+        yield return new WaitForSeconds(1f);
         SwitchState(State.Fail);
     }
 

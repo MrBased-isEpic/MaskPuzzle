@@ -230,9 +230,6 @@ public class PieceManager : MonoBehaviour
         piecesAttached[cell] = piece.id;
         pieceMoveRoutine = StartCoroutine(
             AttachRoutine(piece, cell));
-        
-        if(IsComplete())
-            (ScreenManager.Instance.GetScreen<PuzzleScreen>() as PuzzleScreen).OnPuzzleSolved();
     }
 
     private IEnumerator AttachRoutine(Piece piece, int cell)
@@ -241,6 +238,9 @@ public class PieceManager : MonoBehaviour
             Animations.MoveRectTransformAnchored(piece.rTransform, positions[cell], .1f, Eases.EaseInCubic));
         
         AudioManager.Instance.PlaySfx(putDownSFX);
+        
+        if(IsComplete())
+            (ScreenManager.Instance.GetScreen<PuzzleScreen>() as PuzzleScreen).OnPuzzleSolved();
     }
 
     public void DetachPieceFromCell(int cell)
