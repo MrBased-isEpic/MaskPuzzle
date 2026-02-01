@@ -78,11 +78,6 @@ public class PieceManager : MonoBehaviour
             positions[i] = (pieceData[i].position + worldOffset - cellOffset);
             piecesAttached[i] = -1;
 
-            startPositions[i] = new Vector2(
-                Random.Range(halfWidth, UnityEngine.Screen.width - halfWidth),
-                Random.Range(halfHeight, UnityEngine.Screen.height - halfHeight)
-            );
-
             piece.rTransform.anchoredPosition = positions[i];
             
             int sides = piece.Init(pieceData, i);
@@ -155,6 +150,21 @@ public class PieceManager : MonoBehaviour
         pieces.Clear();
         
     }
+
+    public Vector2[] GetRandomPositions()
+    {
+        Vector2[] startPositions =new Vector2[pieces.Count];
+
+        for (int i = 0; i < pieces.Count; i++)
+        {
+            startPositions[i] = new Vector2(
+                Random.Range(halfWidth, UnityEngine.Screen.width - halfWidth),
+                Random.Range(halfHeight, UnityEngine.Screen.height - halfHeight)
+            );
+        }
+
+        return startPositions;
+    }
     
     #region Animations
 
@@ -218,7 +228,7 @@ public class PieceManager : MonoBehaviour
             Animations.MoveRectTransformAnchored(piece.rTransform, positions[cell], .1f, Eases.EaseInCubic));
         
         if(IsComplete())
-            Debug.Log($"Puzzle is complete");
+            (ScreenManager.Instance.GetScreen<PuzzleScreen>() as PuzzleScreen).OnPuzzleSolved();
     }
 
     public void DetachPieceFromCell(int cell)

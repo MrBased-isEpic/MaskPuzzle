@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2114140876}
     m_Modifications:
+    - target: {fileID: 1332779817246710688, guid: 6e2d87e32487abf47a0679937fd6917f, type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 2126969563}
     - target: {fileID: 3330616633983403928, guid: 6e2d87e32487abf47a0679937fd6917f, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -727,7 +731,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScreenManager
   selfStart: 1
   showFirstScreen: 1
-  createSingleton: 0
+  createSingleton: 1
+--- !u!114 &2126969563 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 687537863923299983, guid: 6e2d87e32487abf47a0679937fd6917f, type: 3}
+  m_PrefabInstance: {fileID: 9599699}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe099dd28587c4e4cb3c34bbc9b24c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Timer
 --- !u!1001 &1790389396172747826
 PrefabInstance:
   m_ObjectHideFlags: 0
