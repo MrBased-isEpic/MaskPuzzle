@@ -592,7 +592,7 @@ TextureImporter:
         width: 1024
         height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -601,6 +601,28 @@ TextureImporter:
       bones: []
       spriteID: 3ae9b9d7b87baf44dafb7bfdf8ea7cea
       internalID: 779836082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mask1_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1007
+        width: 29
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eb51bb916992604088df83fb70d2683
+      internalID: -1126910138
       vertices: []
       indices: 
       edges: []
@@ -636,6 +658,7 @@ TextureImporter:
       Mask1_2: 855520590
       Mask1_20: -395323265
       Mask1_21: 1130566142
+      Mask1_22: -1126910138
       Mask1_3: -649771906
       Mask1_4: 1704337646
       Mask1_5: -1180430745
